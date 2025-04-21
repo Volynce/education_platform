@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="pageTitle">Go study in China - Обучение в Китае</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script defer src="slider/slider.js?v=1.0"></script>
+    <script src="js/nav.js"></script>
+</head>
+<body>   
+    <nav id="header">
+        <div class="nav-left">
+            <ul>
+                <li><a href="#about-section" id="nav-about-section" data-translate="navAboutSection">About Us</a></li>
+                <li><a href="#study-section" id="nav-study" data-translate="navStudy">Study</a></li>
+            </ul>
+        </div>
+        <div class="nav-center">
+            <a href="#home" id="logo-link"><img src="logo.png" alt="Logo" id="logo"></a>
+        </div>
+        <div class="nav-right">
+            <ul>
+                <li><a href="#certificates-section" id="nav-certificates" data-translate="navCertificates">Certificates</a></li>
+                <li><a href="#contact" id="nav-contact" data-translate="navContact">Contact us</a></li>
+            </ul>
+        </div>
+        <div class="nav-right-lang">
+            <div class="language-select">
+                <select id="language-dropdown">
+                    <option value="en">English</option>
+                    <option value="ru">Русский</option>
+                </select>
+            </div>
+        </div>
+        <button class="burger-btn">&#9776;</button>
+        <div class="language-select-mobile">
+            <select id="language-dropdown-mobile">
+                <option value="en">English</option>
+                <option value="ru">Русский</option>
+            </select>
+        </div>
+        <div class="burger-menu">
+            <div class="menu-logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+            <ul>
+                <li><a href="#home" data-translate="navHome">Home</a></li>
+                <li><a href="#about-section" data-translate="navAboutSection">About Us</a></li>
+                <li><a href="#study-section" data-translate="navStudySection">Study</a></li>
+                <li><a href="#certificates-section" data-translate="navCertificates">Certificates</a></li>
+                <li><a href="#contact" data-translate="navContact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+
+    <div class="fullscreen-background" id="home">
+        <img src="mainpic1.jpg" alt="Background Image">
+        <div class="overlay-text" data-translate="overlayText">Choose your bright future from now</div>
+        <div class="additional-info">
+            <div class="left-text">
+                <h3 data-translate="onlineCourseHeading">Online Professional Chinese Language Courses</h3>
+                <p data-translate="onlineCourseText">Professional teachers help you learn the most widely spoken language in the world in advance</p>
+            </div>
+            <div class="right-button">
+                <a href="#contact" class="apply-button" data-translate="applyButton">Apply now</a>
+            </div>
+        </div>
+    </div>
+
+    <section id="study-section">
+        <div class="content">
+            <div class="text-block">
+                <h2 data-translate="studySectionHeading">Are you ready for your study application?</h2>
+                <p data-translate="studyContent1">2024 Chinese Language Mid-term Enrollment</p>
+                <p data-translate="studyContent2">2025 Study in China Early Action (Enrolling for spring and autumn simultaneously, accelerate the start of your study abroad journey)</p>
+                <p data-translate="studyContent3">【If you have a school in mind, we can apply for you】</p>
+                <a href="#contact-form" class="fast-track-button" data-translate="fastTrackButton">Fast Track Admission</a>
+            </div>
+            <div class="slider-block">
+                <h2 data-translate="schoolsHeading">Schools we collaborate with:</h2>
+                <div class="slider-container">
+                    <div class="slider-main">
+                        <div class="slide" onclick="openFullscreen('slider_Images/ChinaUniversityofPoliticalScienceandLaw.jpeg', '中国政法大学', 'China University of Political Science and Law')">
+                            <img src="slider_Images/ChinaUniversityofPoliticalScienceandLaw.jpeg" alt="China University of Political Science and Law">
+                            <p>中国政法大学<br><span>China University of Political Science and Law</span></p>
+                        </div>
+                        <div class="slide" onclick="openFullscreen('slider_Images/ChinaUniversityofPetroleum.jpeg', '中国石油大学', 'China University of Petroleum')">
+                            <img src="slider_Images/ChinaUniversityofPetroleum.jpeg" alt="China University of Petroleum">
+                            <p>中国石油大学<br><span>China University of Petroleum</span></p>
+                        </div>
+                        <div class="slide" onclick="openFullscreen('slider_Images/BeijingUniversityofChemicalTechnology.jpg', '北京化工大学', 'Beijing University of Chemical Technology')">
+                            <img src="slider_Images/BeijingUniversityofChemicalTechnology.jpg" alt="Beijing University of Chemical Technology">
+                            <p>北京化工大学<br><span>Beijing University of Chemical Technology</span></p>
+                        </div>
+                        <div class="slide" onclick="openFullscreen('slider_Images/BeijingInstituteofTechnology.jpeg', '北京理工大学', 'Beijing Institute of Technology')">
+                            <img src="slider_Images/BeijingInstituteofTechnology.jpeg" alt="Beijing Institute of Technology">
+                            <p>北京理工大学<br><span>Beijing Institute of Technology</span></p>
+                        </div>
+                        <div class="slide" onclick="openFullscreen('slider_Images/BeijingForeignStudiesUniversity.jpeg', '北京外国语大学', 'Beijing Foreign Studies University')">
+                            <img src="slider_Images/BeijingForeignStudiesUniversity.jpeg" alt="Beijing Foreign Studies University">
+                            <p>北京外国语大学<br><span>Beijing Foreign Studies University</span></p>
+                        </div>
+                        <div class="slide" onclick="openFullscreen('slider_Images/RenminUniversityofChina.jpeg', '中国人民大学', 'Renmin University of China')">
+                            <img src="slider_Images/RenminUniversityofChina.jpeg" alt="Renmin University of China">
+                            <p>中国人民大学<br><span>Renmin University of China</span></p>
+                        </div>
+                        <div class="slide" onclick="openFullscreen('slider_Images/HebeiNormalUniversity.jpeg', '河北师范大学', 'Hebei Normal University')">
+                            <img src="slider_Images/HebeiNormalUniversity.jpeg" alt="Hebei Normal University">
+                            <p>河北师范大学<br><span>Hebei Normal University</span></p>
+                        </div>
+                        <div class="slide" onclick="openFullscreen('slider_Images/HebeiUniversity.png', '河北大学', 'Hebei University')">
+                            <img src="slider_Images/HebeiUniversity.png" alt="Hebei University">
+                            <p>河北大学<br><span>Hebei University</span></p>
+                        </div>
+                        <div class="slide" onclick="openFullscreen('slider_Images/ShandongUniversity.jpeg', '山东大学', 'Shandong University')">
+                            <img src="slider_Images/ShandongUniversity.jpeg" alt="Shandong University">
+                            <p>山东大学<br><span>Shandong University</span></p>
+                        </div>
+                        <div class="slide" onclick="openFullscreen('slider_Images/ShandongNormalUniversity.jpg', '山东师范大学', 'Shandong Normal University')">
+                            <img src="slider_Images/ShandongNormalUniversity.jpg" alt="Shandong Normal University">
+                            <p>山东师范大学<br><span>Shandong Normal University</span></p>
+                        </div>
+                        <div class="slide" onclick="openFullscreen('slider_Images/QufuNormalUniversity.jpeg', '曲阜师范大学', 'Qufu Normal University')">
+                            <img src="slider_Images/QufuNormalUniversity.jpeg" alt="Qufu Normal University">
+                            <p>曲阜师范大学<br><span>Qufu Normal University</span></p>
+                        </div>
+                        <div class="slide" onclick="openFullscreen('slider_Images/BeijingNormalUniversity.jpg', '北京师范大学', 'Beijing Normal University')">
+                            <img src="slider_Images/BeijingNormalUniversity.jpg" alt="Beijing Normal University">
+                            <p>北京师范大学<br><span>Beijing Normal University</span></p>
+                        </div>
+                        <div class="slide" onclick="openFullscreen('slider_Images/ShanghaiUniversityofInternationalBusinessandEconomics.jpeg', '上海对外经贸大学', 'Shanghai University of International Business and Economics')">
+                            <img src="slider_Images/ShanghaiUniversityofInternationalBusinessandEconomics.jpeg" alt="Shanghai University of International Business and Economics">
+                            <p>上海对外经贸大学<br><span>Shanghai University of International Business and Economics</span></p>
+                        </div>
+                        <div class="slide" onclick="openFullscreen('slider_Images/ShanghaiBusinessSchool.jpeg', '上海商学院', 'Shanghai Business School')">
+                            <img src="slider_Images/ShanghaiBusinessSchool.jpeg" alt="Shanghai Business School">
+                            <p>上海商学院<br><span>Shanghai Business School</span></p>
+                        </div>
+                    </div>
+                    <div class="thumbnail-container">
+                        <div class="thumbnail-row">
+                            <img src="slider_Images/ChinaUniversityofPoliticalScienceandLaw.jpeg" alt="China University of Political Science and Law" onclick="openFullscreen('slider_Images/ChinaUniversityofPoliticalScienceandLaw.jpeg', '中国政法大学', 'China University of Political Science and Law')">
+                            <img src="slider_Images/ChinaUniversityofPetroleum.jpeg" alt="China University of Petroleum" onclick="openFullscreen('slider_Images/ChinaUniversityofPetroleum.jpeg', '中国石油大学', 'China University of Petroleum')">
+                        </div>
+                        <div class="thumbnail-row">
+                            <img src="slider_Images/BeijingUniversityofChemicalTechnology.jpg" alt="Beijing University of Chemical Technology" onclick="openFullscreen('slider_Images/BeijingUniversityofChemicalTechnology.jpg', '北京化工大学', 'Beijing University of Chemical Technology')">
+                            <img src="slider_Images/BeijingInstituteofTechnology.jpeg" alt="Beijing Institute of Technology" onclick="openFullscreen('slider_Images/BeijingInstituteofTechnology.jpeg', '北京理工大学', 'Beijing Institute of Technology')">
+                        </div>
+                        <div class="thumbnail-row">
+                            <img src="slider_Images/BeijingForeignStudiesUniversity.jpeg" alt="Beijing Foreign Studies University" onclick="openFullscreen('slider_Images/BeijingForeignStudiesUniversity.jpeg', '北京外国语大学', 'Beijing Foreign Studies University')">
+                            <img src="slider_Images/RenminUniversityofChina.jpeg" alt="Renmin University of China" onclick="openFullscreen('slider_Images/RenminUniversityofChina.jpeg', '中国人民大学', 'Renmin University of China')">
+                        </div>
+                        <div class="thumbnail-row">
+                            <img src="slider_Images/HebeiNormalUniversity.jpeg" alt="Hebei Normal University" onclick="openFullscreen('slider_Images/HebeiNormalUniversity.jpeg', '河北师范大学', 'Hebei Normal University')">
+                            <img src="slider_Images/HebeiUniversity.png" alt="Hebei University" onclick="openFullscreen('slider_Images/HebeiUniversity.png', '河北大学', 'Hebei University')">
+                        </div>
+                        <div class="thumbnail-row">
+                            <img src="slider_Images/ShandongUniversity.jpeg" alt="Shandong University" onclick="openFullscreen('slider_Images/ShandongUniversity.jpeg', '山东大学', 'Shandong University')">
+                            <img src="slider_Images/ShandongNormalUniversity.jpg" alt="Shandong Normal University" onclick="openFullscreen('slider_Images/ShandongNormalUniversity.jpg', '山东师范大学', 'Shandong Normal University')">
+                        </div>
+                        <div class="thumbnail-row">
+                            <img src="slider_Images/QufuNormalUniversity.jpeg" alt="Qufu Normal University" onclick="openFullscreen('slider_Images/QufuNormalUniversity.jpeg', '曲阜师范大学', 'Qufu Normal University')">
+                            <img src="slider_Images/BeijingNormalUniversity.jpg" alt="Beijing Normal University" onclick="openFullscreen('slider_Images/BeijingNormalUniversity.jpg', '北京师范大学', 'Beijing Normal University')">
+                        </div>
+                        <div class="thumbnail-row">
+                            <img src="slider_Images/ShanghaiUniversityofInternationalBusinessandEconomics.jpeg" alt="Shanghai University of International Business and Economics" onclick="openFullscreen('slider_Images/ShanghaiUniversityofInternationalBusinessandEconomics.jpeg', '上海对外经贸大学', 'Shanghai University of International Business and Economics')">
+                            <img src="slider_Images/ShanghaiBusinessSchool.jpeg" alt="Shanghai Business School" onclick="openFullscreen('slider_Images/ShanghaiBusinessSchool.jpeg', '上海商学院', 'Shanghai Business School')">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fullscreen overlay -->
+            <div class="fullscreen-overlay" id="study-fullscreen-overlay">
+                <div id="fullscreen-text"></div>
+                <img id="study-fullscreen-img" src="" alt="Fullscreen Image">
+                <button id="close-study-fullscreen" onclick="closeFullscreen()">✖</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-section">
+        <!-- About Title centered at the top -->
+        <div id="about-title" data-translate="aboutTitle">About us</div>
+        <!-- Flex container for the content -->
+        <div class="about-container">
+            <!-- Left: Text Content -->
+            <div class="about-content slide-in-left">
+                <h2 data-translate="whoWeAreHeading">Who We Are</h2>
+                <p data-translate="whoWeAreText">
+                    Go Study In China is a professional and comprehensive study abroad education company. We have established strong business partnerships with dozens of schools in China and employ several Chinese study abroad consultants. We help students from various countries to study in China. We are committed to providing a full range of services including study abroad intermediation, educational training consultancy, education services, and language training. Our extensive scope of services covers school applications, study abroad planning, Chinese language training, document submission, interview coaching, visa services, and more, enabling students to enjoy a “one-stop” study abroad experience.
+                </p>
+                <h2 data-translate="whyStudyHeading">Why Study in China?</h2>
+                <p data-translate="whyStudyText">
+                    Studying in China means you will develop alongside one of the countries with the strongest technological foundations and the most promising future prospects in the world.
+                </p>
+            </div>
+        </div>
+        <!-- Fullscreen overlay -->
+        <div class="fullscreen-overlay" id="about-fullscreen-overlay">
+            <img id="about-fullscreen-img" src="" alt="Fullscreen Image">
+            <div id="about-fullscreen-caption"></div>
+            <button id="close-about-fullscreen" onclick="closeFullscreen()">✖</button>
+        </div>
+    </section>
+
+    <section id="certificates-section">
+            <h2 class="certificate-title" data-translate="certificatesHeading">Our Admission Notifications</h2>
+        <div class="slider-container">
+            <div class="slider">
+                <img src="slider/slider_Images/1.jpg" class="certificate" alt="Certificate 1">
+                <img src="slider/slider_Images/2.jpg" class="certificate" alt="Certificate 2">
+                <img src="slider/slider_Images/3.jpg" class="certificate" alt="Certificate 3">
+                <img src="slider/slider_Images/4.jpg" class="certificate" alt="Certificate 4">
+                <img src="slider/slider_Images/5.jpg" class="certificate" alt="Certificate 5">
+                <img src="slider/slider_Images/6.jpg" class="certificate" alt="Certificate 6">
+                <img src="slider/slider_Images/7.jpg" class="certificate" alt="Certificate 7">
+                <img src="slider/slider_Images/8.jpg" class="certificate" alt="Certificate 8">
+                <img src="slider/slider_Images/9.jpg" class="certificate" alt="Certificate 9">
+                <img src="slider/slider_Images/10.jpg" class="certificate" alt="Certificate 10">
+                <img src="slider/slider_Images/11.jpg" class="certificate" alt="Certificate 11">
+                <img src="slider/slider_Images/12.jpg" class="certificate" alt="Certificate 12">
+                <img src="slider/slider_Images/13.jpg" class="certificate" alt="Certificate 13">
+            </div>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="prev" data-translate="prevButton">←</button>
+            <button id="next" data-translate="nextButton">→</button>
+        </div>
+        <div class="fullscreen-overlay" id="fullscreen-overlay">
+            <img id="fullscreen-img" src="" alt="Fullscreen Certificate">
+            <button id="close-fullscreen" data-translate="closeFullscreenButton">✖</button>
+        </div>
+    </section>
+
+    <section id="scholarship-section">
+        <div class="scholarship-info">
+            <h2 data-translate="scholarshipSectionHeading">Answers</h2>
+            <p data-translate="scholarship1">Need a guardian for minors</p>
+            <p data-translate="scholarship2">No foundation in Chinese?</p>
+            <p data-translate="scholarship3">Prefer courses taught in English?</p>
+            <p data-translate="scholarship4">Want to change majors?</p>
+            <p data-translate="scholarship5">Interested in a short-term group language summer camp?</p>
+            <p data-translate="scholarship6">Limited funds for study abroad living expenses?</p>
+        </div>
+        <!-- Call to action -->
+        <div class="apply-now">
+            <p data-translate="applyNowText">No need to worry, we can solve all these issues for you</p>
+            <a href="#contact" class="apply-button" data-translate="applyButton">Apply now</a>
+        </div>
+    </section>
+    
+    <section id="advantages-section">
+        <h2 data-translate="advantagesHeading">Our Advantages</h2>
+        
+        <div class="program-block-advantage" id="advantage-1">
+            <div class="program-title-advantage" data-translate="advantage1Title">Pay once, benefit for four years</div>
+            <div class="program-content-advantage">
+                <p data-translate="advantage1Content">For language class application programs, after successfully graduating from a one-year language class with an HSK level, undergraduate study abroad applications are provided for free; for undergraduate application programs, regardless of whether courses are taught in Chinese or English, one-time payment ensures support until undergraduate graduation, and free graduate application consultation and planning are provided.</p>
+            </div>
+        </div>
+    
+        <div class="program-block-advantage" id="advantage-2">
+            <div class="program-title-advantage" data-translate="advantage2Title">Professional one-stop service by a team</div>
+            <div class="program-content-advantage">
+                <p data-translate="advantage2Content">A team of professional international education planners from China will serve you throughout the process based on your needs, providing complete study abroad planning in China from application to overseas study life, truly making your study abroad worry-free.</p>
+            </div>
+        </div>
+    
+        <div class="program-block-advantage" id="advantage-3">
+            <div class="program-title-advantage" data-translate="advantage3Title">Full support with value-added services</div>
+            <div class="program-content-advantage">
+                <p data-translate="advantage3Content">Multiple professional Chinese teachers provide you with high-quality online and offline language tutoring, pre-departure guidance for China, effectively addressing students' psychological barriers to leaving home. It eases the difficulties of studying abroad by offering services like airport pick-up, bank account opening, daily commuting, housing rentals, and other life guidance services, helping students smoothly transition into study abroad life.</p>
+            </div>
+        </div>
+    
+        <div class="program-block-advantage" id="advantage-4">
+            <div class="program-title-advantage" data-translate="advantage4Title">Giveaway</div>
+            <div class="program-content-advantage">
+                <p data-translate="advantage4Content">Follow and comment on our Instagram account, send a screenshot to your consultant, and you will have the chance to participate in a draw to win a [Free Study in China Opportunity] and [Upgraded Application Services].</p>
+            </div>
+        </div>
+    
+        <div class="program-block-advantage" id="advantage-5">
+            <div class="program-title-advantage" data-translate="advantage5Title">Language Services</div>
+            <div class="program-content-advantage">
+                <p data-translate="advantage5Content">• Online professional HSK Chinese language tutoring<br>• Online Chinese conversation practice with native speakers<br>• Consultation and communication on study abroad programs<br>• Interview coaching</p>
+            </div>
+        </div>
+    
+        <div class="program-block-advantage" id="advantage-6">
+            <div class="program-title-advantage" data-translate="advantage6Title">Customized Private Services</div>
+            <div class="program-content-advantage">
+                <p data-translate="advantage6Content">Tailored to your major, your needs, and your career planning, we provide the most suitable study abroad pathway for you.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="programs-section">
+        <div class="program-block left" id="language-program">
+            <div class="program-title" data-translate="langProgramTitle">Language Program</div>
+            <div class="program-content">
+                <p data-translate="langProgramContent1">Non-degree Chinese Language Training</p>
+                <p data-translate="langProgramContent2">Prepares you for pursuing a bachelor’s degree at a university.</p>
+                <p data-translate="langProgramContent3">For most majors and scholarship applications within Chinese undergraduate degrees, students are required to have a Chinese HSK level of 4-5. The Chinese Language Training Program is a non-degree program offered by Chinese universities for international students with at least a high school education. It typically includes beginner, intermediate, and advanced courses, usually lasting from one semester to one year, and is taught at Chinese universities.</p>
+                <p data-translate="langProgramContent4">Target Audience: Beginners in Chinese, not passed HSK level 4</p>
+                <p data-translate="langProgramContent5">Learning Content: Chinese listening, speaking, reading, writing, and experience with Chinese culture</p>
+                <p data-translate="langProgramContent6">Learning Mode: Offline classes within Chinese schools</p>
+                <p data-translate="langProgramContent7">Ensuring Your Success: Professional teachers and learning environments will significantly improve your HSK pass rate, ensuring your application to university undergraduate programs. The school's extracurricular activities and excellent accommodation facilities allow you to experience the lifestyle of studying in China in a relaxed learning process.</p>
+            </div>
+        </div>
+        <div class="program-block right" id="bachelors-masters-program">
+            <div class="program-title" data-translate="bachelorsMastersTitle">University Bachelor's/Master's Program</div>
+            <div class="program-content">
+                <p data-translate="bachelorsMastersContent1">1.English-Taught Programs Direct admission to universities without needing Chinese proficiency (IELTS or TOEFL certificate required, or proof of English instruction during high school)</p>
+                <p data-translate="bachelorsMastersContent2">2.Chinese-Taught Programs More choices of majors and schools (HSK level 4 or above certificate required)</p>
+                <p data-translate="bachelorsMastersContent3">Target Audience: High school graduates with proof of English or Chinese proficiency</p>
+                <p data-translate="bachelorsMastersContent4">Scope of Schools: Focused on applications to China's top 100 and top-tier specialized schools</p>
+                <p data-translate="bachelorsMastersContent5">Learning Scope: Offline classes within Chinese schools Scholarships: Partial or full scholarships</p>
+                <p data-translate="bachelorsMastersContent6">【School Selection, Customized Privately】</p>
+            </div>
+        </div>
+        <div class="program-block left" id="one-plus-four-program">
+            <div class="program-title" data-translate="onePlusFourTitle">1+4 Program</div>
+            <div class="program-content">
+                <p data-translate="onePlusFourContent1">Preparatory Course + Undergraduate Specialized Plan</p>
+                <p data-translate="onePlusFourContent2">After 1 year of language classes, use your HSK results to directly enter a university's undergraduate scholarship program. Secure your undergraduate spot in advance with no application pressure and guaranteed scholarships.</p>
+                <p data-translate="onePlusFourContent3">Target Audience: High school graduates</p>
+                <p data-translate="onePlusFourContent4">Learning Content: 1 year of Chinese language courses, followed by 4 years of university studies in your major</p>
+                <p data-translate="onePlusFourContent5"> Scope of Schools: Choose from over 10 schools in China</p>
+                <p data-translate="onePlusFourContent6">Reduce study pressure and benefit from a broader range of scholarship policies.</p>
+
+            </div>
+        </div>
+        <div class="program-block right" id="technical-program">
+            <div class="program-title" data-translate="technicalProgramTitle">Technical Majors: Associate to Bachelor's Program</div>
+            <div class="program-content">
+                <p data-translate="technicalProgramContent1">Low language requirements, low cost, high return, good job prospects. From diploma to bachelor's degree, an easier-to-obtain credential. Cultivating applied talents</p>
+                <p data-translate="technicalProgramContent2">Target Audience: Students with limited study abroad funds or those who place a higher value on vocational and technical education</p>
+                <p data-translate="technicalProgramContent3">Scope of Schools: Top 20 higher vocational and technical colleges in China</p>
+                <p data-translate="technicalProgramContent4">Scholarships: Partial or full scholarships</p>
+                <p data-translate="technicalProgramContent5">Fields of study include: Nursing, Architecture, Mechanical Manufacturing, Automotive Manufacturing, Trade, Logistics, Information Engineering, Electrical, and others</p>
+            </div>
+        </div>
+    </section>
+
+<section id="contact" class="contact">
+        <h2 class="contact-title" data-translate="contactTitle">Contact Us</h2>
+        <section id="contact-form-section">
+            <h2 data-translate="contactFormHeading">Contact Us Now</h2>
+            <form id="contactForm">
+                <label for="name" data-translate="nameLabel">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required data-translate="namePlaceholder">
+                
+                <label for="email" data-translate="emailLabel">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email" required data-translate="emailPlaceholder">
+                
+                <label for="phone" data-translate="phoneLabel">Phone:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your phone" required data-translate="phonePlaceholder">
+                
+                <label for="telegram" data-translate="telegramLabel">Telegram:</label>
+                <input type="text" id="telegram" name="telegram" placeholder="Your Telegram" data-translate="telegramPlaceholder">
+                
+                <button type="submit" data-translate="submitButton">Send</button>
+            </form>
+            <p id="responseMessage" style="color: green;" data-translate="responseMessage"></p>
+        </section>
+    </section>
+    
+
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">↑</button>
+
+    <footer>
+        <p data-translate="socialMedia">Follow us:</p>
+        <div class="social-icons">
+            <a href="https://t.me/go_study_in_china" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+            <a href="https://www.instagram.com/go_study_in_china?igsh=MWIxNXllbjk0NTJreA==" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/+79635336700" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:go_study_in_china@mail.ru" target="_blank"><i class="fas fa-envelope"></i></a>
+        </div>
+    </footer>
+    <script src="js/animation.js"></script>
+    <script src="js/lan.js"></script>
+    <script src="js/blocks-animation.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="form.js"></script>
+    <script src="js/form.js"></script>
+    <script src="/jquery-3.6.0.min.js"></script>
+</body>
+</html>

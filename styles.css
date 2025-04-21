@@ -1,0 +1,1772 @@
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #f0f8f8;
+    width: 100%;
+    height: 100%;
+}
+
+/* Универсальные стили для заголовков */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    text-align: center; /* Центрируем все заголовки */
+    margin-top: 20px; /* Универсальные отступы сверху */
+    margin-bottom: 20px; /* Универсальные отступы снизу */
+}
+
+/* Универсальные стили для параграфов */
+p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px; /* Универсальный размер текста */
+    line-height: 1.6; /* Комфортная высота строки */
+    margin-bottom: 20px; /* Отступы снизу для параграфов */
+}
+
+/* Общие отступы для всех секций */
+.section-content {
+    padding: 40px 20px; /* Универсальные отступы для секций */
+}
+
+/* Применение Nunito для основного текста и ссылок */
+body, p, a, li {
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Дополнительные стили для ссылок */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 80px;
+}
+
+.hide {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.nav-left, .nav-right, .nav-center {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.nav-left {
+    justify-content: flex-end;
+    margin-left: 20%; /* Уменьшили отступ */
+}
+
+.nav-center {
+    justify-content:center;
+}
+
+.nav-right {
+    justify-content: flex-start;
+    margin-right: 5%; /* Уменьшили отступ */
+}
+
+.nav-right-lang {
+    justify-content: flex-end;
+    margin-right: 5%; /* Уменьшили отступ */
+}
+
+#logo {
+    width: 230px;
+    opacity: 1;
+    transition: width 0.3s ease, opacity 0.3s ease;
+    object-fit: contain;
+    top: 80px;
+    right: auto;
+    left: auto;
+    margin-top: 70%;
+}
+
+#logo.shrink {
+    width: 80px;
+    margin-top: 0%;
+    left: 0;
+    opacity: 1; /* Логотип видим при прокрутке */
+    z-index: 3;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 30px; /* Уменьшили отступы */
+}
+
+nav ul li {
+    padding: 0;
+}
+
+nav ul li a {
+    color: #f0f8f8;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: "Raleway", sans-serif;
+}
+
+.language-select {
+    position: relative;
+    margin-left: 30px; /* Уменьшили отступ */
+}
+
+/* Стили для выпадающего меню языка */
+#language-dropdown {
+    appearance: none;
+    background-color: rgba(0, 0, 0, 0.2); /* Фон закрытого меню */
+    color: #f0f8f8;
+    font-family: "Raleway", sans-serif;
+    padding: 5px 20px 5px 15px;
+    font-size: 16px;
+    border: 2px solid #f0f8f8;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Стили для выпадающего списка */
+#language-dropdown:focus {
+    background-color: rgba(0, 0, 0, 0.8); /* Цвет фона раскрытого меню */
+    color: #f0f8f8;
+    border-color: #1E9CFF;
+}
+
+/* Для всех опций внутри выпадающего меню */
+#language-dropdown option {
+    background-color: rgba(0, 0, 0, 0.8); /* Цвет фона каждой опции */
+    color: #f0f8f8;
+    font-family: "Raleway", sans-serif;
+}
+
+.language-select::after {
+    position: absolute;
+    right: 15px; /* Уменьшили отступ */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #f0f8f8;
+    pointer-events: none;
+}
+
+#language-dropdown-mobile {
+    appearance: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #f0f8f8;
+    font-family: "Raleway", sans-serif;
+    padding: 5px 20px 5px 15px;
+    font-size: 16px; /* Уменьшили размер текста */
+    border: 2px solid #f0f8f8;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.language-select-mobile::after {
+    position: absolute;
+    right: 20px; /* Уменьшили отступ */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #f0f8f8;
+    pointer-events: none;
+}
+
+/* Стили для выпадающего списка */
+#language-select-mobile:focus {
+    background-color: rgba(0, 0, 0, 0.8); /* Цвет фона раскрытого меню */
+    color: #f0f8f8;
+    border-color: #1E9CFF;
+}
+
+/* Для всех опций внутри выпадающего меню */
+#language-select-mobile option {
+    background-color: rgba(0, 0, 0, 0.8); /* Цвет фона каждой опции */
+    color: #f0f8f8;
+    font-family: "Raleway", sans-serif;
+}
+
+/* Адаптив для планшетов (от 768px до 992px) */
+@media (max-width: 992px) {
+    #header {
+        height: 65px;
+    }
+
+    nav ul {
+        gap: 20px; /* Уменьшили отступы */
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .language-select {
+        margin-left: 20px;
+    }
+
+    #language-dropdown {
+        font-size: 14px;
+    }
+}
+
+/* Адаптив для мобильных (до 768px) */
+@media (max-width: 768px) {
+    .nav-left, .nav-right {
+        display: none;
+    }
+
+    .language-select-mobile {
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 10px;
+        font-size: 0.9rem;
+    }
+
+    .burger-btn {
+        display: block;
+        order: 2;
+    }
+
+    #logo {
+        display: none;
+    }
+}
+
+.burger-btn {
+    display: none;
+    font-size: 28px;
+    background: none;
+    color: #f0f8f8;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.burger-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: right 0.3s ease;
+    padding-top: 80px;
+}
+
+.burger-menu.show {
+    right: 0;
+}
+
+.burger-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 20px;
+}
+
+.burger-menu ul li a {
+    color: #f0f8f8;
+    font-size: 1.5rem;
+}
+
+.burger-menu .menu-logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.burger-menu .menu-logo img {
+    width: 100px;
+}
+
+.language-select-mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .nav-left, .nav-right {
+        display: none;
+    }
+
+    .language-select {
+        display: none;
+    }
+
+    .language-select-mobile {
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 10px;
+        font-size: 0.9rem;
+    }
+
+    .burger-btn {
+        display: block;
+        order: 2;
+    }
+
+    #logo {
+        display: none;
+    }
+}
+
+
+/* Общие стили */
+.fullscreen-background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.fullscreen-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fullscreen-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+/* Стили для overlay текста */
+.overlay-text {
+    font-family: "Raleway", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    position: absolute;
+    top: 30%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+    font-size: 45px; 
+    color: rgba(255, 255, 255, 0.8);
+    white-space: nowrap;
+    z-index: 2;
+    opacity: 0;
+    transition: transform 2s ease, opacity 2s ease;
+}
+
+.overlay-text.visible {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+/* Основной блок с информацией */
+.additional-info {
+    display: flex;
+    flex-direction: column; /* Располагаем элементы друг под другом */
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    color: white;
+    opacity: 0;
+    z-index: 2;
+    transition: opacity 2s ease;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px 25px;
+    border-radius: 10px;
+}
+
+.additional-info.visible {
+    opacity: 1;
+}
+
+.left-text {
+    text-align: center;
+    margin-bottom: 20px; /* Отступ между текстом и кнопкой */
+}
+
+.apply-button {
+    background-color: #1E9CFF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Raleway", sans-serif;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+    width: 150px; 
+    text-align: center;
+}
+
+.apply-button:hover {
+    background-color: #1678cc;
+}
+
+/* Адаптив для экранов ноутбуков */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    #logo {
+        width: 150px;
+        top: 40px;
+        left: 20px;
+    }
+
+    .overlay-text {
+        font-size: 40px;
+        top: 35%;
+    }
+
+    .additional-info {
+        top: 60%;
+        width: 60%;
+        padding: 15px 30px;
+    }
+
+    .apply-button {
+        font-size: 16px;
+        padding: 12px 24px;
+        width: 140px;
+    }
+}
+
+/* Адаптив для больших экранов */
+@media (min-width: 1440px) {
+    #logo {
+        width: 180px;
+        top: 55px;
+        left: 30px;
+    }
+
+    .overlay-text {
+        font-size: 50px;
+        top: 30%;
+    }
+
+    .additional-info {
+        width: 50%;
+        padding: 20px 40px;
+    }
+
+    .apply-button {
+        font-size: 18px;
+        padding: 15px 30px;
+        width: 150px;
+    }
+}
+
+/* Адаптив для планшетов */
+@media (max-width: 1200px) {
+    #logo {
+        width: 120px;
+        top: 40px;
+    }
+
+    .overlay-text {
+        font-size: 35px;
+        top: 25%;
+    }
+
+    .additional-info {
+        width: 60%;
+    }
+
+    .apply-button {
+        font-size: 16px;
+        width: 130px;
+    }
+}
+
+/* Адаптив для маленьких экранов */
+@media (max-width: 992px) {
+    #logo {
+        width: 100px;
+        top: 30px;
+    }
+
+    .overlay-text {
+        font-size: 30px;
+    }
+
+    .additional-info {
+        flex-direction: column;
+        width: 70%;
+    }
+
+    .apply-button {
+        font-size: 14px;
+        width: 120px;
+    }
+}
+
+/* Адаптив для мобильных устройств */
+@media (max-width: 768px) {
+    #logo {
+        width: 80px;
+        top: 25px;
+    }
+
+    .overlay-text {
+        font-size: 25px;
+    }
+
+    .additional-info {
+        width: 80%;
+    }
+
+    .apply-button {
+        font-size: 12px;
+        width: 110px;
+    }
+}
+
+@media (max-width: 480px) {
+    #logo {
+        width: 60px;
+        top: 20px;
+    }
+
+    .overlay-text {
+        font-size: 15px;
+        top: 15%;
+    }
+
+    .additional-info {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .apply-button {
+        font-size: 10px;
+        padding: 8px 15px;
+        width: 100px;
+    }
+}
+
+/*!БЛОК С СЕРТИФИКАТАМИ*/
+#certificates-section {
+    background-color: #535353;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-container {
+    padding-top: 50px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+    align-items: center;
+}
+
+.certificate {
+    top: 50%; /* Центрирование стрелок по вертикали относительно изображений */
+    width: 30%; /* Уменьшил размер сертификатов для лучшего отображения */
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.controls {
+    position: absolute;
+    top: 50%; /* Центрирование стрелок по вертикали относительно изображений */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none; /* Чтобы кнопки не блокировали изображения */
+}
+
+.controls button {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    pointer-events: all; /* Разрешаем клики по кнопкам */
+}
+
+.fullscreen-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.fullscreen-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+#close-fullscreen {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+#prev, #next {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10;
+}
+
+#prev {
+    left: 0; /* Стрелка слева */
+}
+
+#next {
+    right: 0; /* Стрелка справа */
+}
+
+/* Адаптивность для ноутбуков */
+@media (max-width: 1440px) {
+    .certificate {
+        width: 20%;
+        margin: 0 10px;
+    }
+
+    .certificate-title h2 {
+        font-size: 32px; /* Немного уменьшен размер заголовка для ноутбуков */
+        padding-bottom: 30px; /* Уменьшение отступа снизу */
+    }
+
+    .controls {
+        top: 45%;
+    }
+
+    #prev, #next {
+        font-size: 20px;
+        padding: 8px 16px;
+    }
+}
+
+
+
+/* Адаптивность для планшетов и устройств с малой шириной */
+@media (max-width: 1200px) {
+    .certificate {
+        width: 10%;
+        margin: 0 10px;
+    }
+
+    .certificate-title h2 {
+        font-size: 20px; /* Немного уменьшен размер заголовка для ноутбуков */
+        padding-bottom: 30px; /* Уменьшение отступа снизу */
+    }
+
+    .controls {
+        top: 50%;
+    }
+}
+
+/* Дополнительная адаптивность для устройств с очень маленькими экранами (например, смартфоны) */
+@media (max-width: 480px) {
+    .certificate {
+        width: 100%;
+        margin: 0 5px;
+    }
+
+    .certificate-title h2 {
+        font-size: 10px; /* Немного уменьшен размер заголовка для ноутбуков */
+        padding-bottom: 30px; /* Уменьшение отступа снизу */
+    }
+
+    #prev, #next {
+        padding: 8px 15px;
+        font-size: 20px;
+    }
+}
+
+.certificate-title {
+    position: absolute;
+    top: 20px; /* Позиция сверху */
+    width: 100%;
+    text-align: center;
+    text-align: center;
+    color: white;
+    padding-bottom: 40px; /* Добавляем отступ снизу */
+    font-size: 40px;
+}
+
+.certificate-title h2 {
+
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    color: white;
+    margin: 0;
+    padding-bottom: 50px; /* Adding bottom padding */
+    font-weight: 40px; /* Set to normal weight */
+}
+
+/* Стили для мобильных устройств */
+@media (max-width: 768px) {
+    .certificate-title h2 {
+        font-size: 20px; /* Уменьшение размера текста на мобильных устройствах */
+        padding-bottom: 20px; /* Меньший отступ снизу для мобильных устройств */
+    }
+       #prev, #next {
+        display: none;
+    }
+
+    .certificate {
+        width: 60%;
+        margin: 0 5px;
+    }
+}
+
+/*!БЛОК С ШКОЛАМИ*/
+/* Основная секция */
+#study-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #353535;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Контент внутри секции с текстом и слайдером */
+.content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Текстовый блок слева, занимает 20% */
+.text-block {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем содержимое по горизонтали */
+    color: rgba(255, 255, 255, 0.719);
+}
+
+.text-block h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.text-block p {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.fast-track-button {
+    text-align: center;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1e9cff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+}
+
+.fast-track-button:hover {
+    background-color: #1678cc;
+}
+
+/* Блок слайдера и миниатюр справа, занимает 80% */
+.slider-block {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slider-block h2 {
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+
+/* Главный слайдер, занимает 40% */
+.slider-main {
+    width: 40%;
+    position: relative;
+    margin-right: 20px;
+}
+
+.slider-main .slide {
+    display: none;
+    position: relative;
+}
+
+.slider-main .slide img {
+    width: 100%;
+    height: auto;
+}
+
+/* Текст на картинках, расположен сверху и центрирован */
+.slider-main .slide p {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Показываем первый слайд по умолчанию */
+.slider-main .slide:first-child {
+    display: block;
+}
+
+/* Миниатюры справа, занимают 40% */
+.thumbnail-container {
+    width: 40%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* 4 колонки */
+    grid-gap: 10px;
+}
+
+.thumbnail-container img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+/* При наведении увеличиваем прозрачность */
+.thumbnail-container img:hover, .thumbnail-container img.active {
+    opacity: 1;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .slider-main .slide p {
+        font-size: 10px; /* Уменьшаем размер текста на мобильных */
+        padding: 3px;    /* Уменьшаем padding */
+    }
+
+    /* Центрирование элементов внутри .text-block */
+    .text-block {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .text-block h2 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .slider-block h2 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .text-block p {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .fast-track-button {
+        margin: 0 auto; /* Центрируем кнопку */
+    }
+
+    .slider-block {
+        width: 100%;
+    }
+
+    .slider-main {
+        width: 100%; /* Слайдер на всю ширину */
+    }
+
+    .thumbnail-container {
+        width: 100%; /* Миниатюры на всю ширину */
+        grid-template-columns: repeat(4, 1fr); /* Миниатюры в 4 колонки */
+    }
+}
+
+/* Адаптивность для планшетов */
+@media (max-width: 1024px) {
+    .slider-main .slide p {
+        font-size: 12px; /* Увеличиваем текст для планшетов */
+        padding: 5px;    /* Увеличиваем padding */
+    }
+
+    .text-block {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .fast-track-button {
+        margin: 0 auto; /* Центрируем кнопку */
+    }
+}
+
+/* Адаптивность для ноутбуков */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .slider-block h2, .text-block h2 {
+        font-size: 36px;
+    }
+
+    .text-block p {
+        font-size: 18px;
+    }
+
+    .fast-track-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .slider-main {
+        width: 60%;
+    }
+
+    .thumbnail-container {
+        width: 35%;
+    }
+}
+
+/* Скругляем углы у изображений главного слайдера */
+.slider-main .slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px; /* Скругляем углы */
+}
+
+/* Скругляем углы у миниатюр */
+.thumbnail-container img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    border-radius: 5px; /* Скругляем углы */
+}
+
+/* Fullscreen overlay for the study section */
+#study-fullscreen-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+#study-fullscreen-overlay img {
+    max-width: 90%;
+    max-height: 70%;
+    margin-bottom: 20px;
+}
+
+#fullscreen-text {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#close-study-fullscreen {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Main About Section Styles */
+#about-section {
+    background-color: #DFCDB7;
+    padding: 10px 20px;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* About Title styling */
+#about-title {
+    font-size: 40px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    color: #000;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Text container without flex */
+.about-container {
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Paragraphs' animation styles */
+.about-content p {
+    opacity: 0;
+    transform: translateY(50px); /* Animation start position */
+    transition: all 1s ease-in-out;
+}
+
+/* Animate when the section becomes visible */
+.about-content p.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Media Queries for small screens */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 0 5px;
+    }
+
+    #about-title {
+        font-size: 28px;
+    }
+}
+
+/*!БЛОК С ВЫЕЗЖАЮЩИМИ ПРОГРАММАМИ*/
+
+#programs-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+    background-color: #86A8D5;
+    max-width: 100vw; /* Ограничение ширины секции */
+    box-sizing: border-box; /* Учет паддингов и бордеров в ширине */
+}
+
+.program-block {
+    width: 100%;
+    position: relative;
+    background-color: #000000;
+    color: rgb(240, 240, 240);
+    padding: 20px;
+    margin: 10px 0;
+    opacity: 0; /* Блок изначально скрыт */
+    transform: translateY(100px); /* Изначально смещаем вниз */
+    transition: transform 1.5s ease, opacity 1.5s ease; /* Более плавная анимация */
+    max-width: 50%; /* Ограничение ширины блока */
+}
+
+.program-title {
+    font-size: 24px; /* Увеличен размер заголовков */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Для заголовков в левых блоках - прижимаем текст вправо */
+.program-block.left .program-title {
+    text-align: right; /* Прижимаем заголовок к правому краю */
+}
+
+/* Для левых блоков */
+.program-block.left {
+    align-self: flex-start;
+    margin-right: auto;
+    transform: translateX(-100px); /* Смещение влево для анимации */
+    border-top-right-radius: 15px; /* Скругление верхнего правого угла */
+    border-bottom-right-radius: 15px; /* Скругление нижнего правого угла */
+    border-top-left-radius: 0; /* Убираем скругление верхнего левого угла */
+    border-bottom-left-radius: 0; /* Убираем скругление нижнего левого угла */
+}
+
+/* Для правых блоков - все остается как есть */
+.program-block.right .program-title {
+    text-align: left; /* Заголовки в правых блоках остаются выровненными по левому краю */
+}
+
+.program-block.right {
+    align-self: flex-end;
+    margin-left: auto;
+    transform: translateX(100px); /* Смещение вправо для анимации */
+    border-top-left-radius: 15px; /* Скругление верхнего левого угла */
+    border-bottom-left-radius: 15px; /* Скругление нижнего левого угла */
+    border-top-right-radius: 0; /* Убираем скругление верхнего правого угла */
+    border-bottom-right-radius: 0; /* Убираем скругление нижнего правого угла */
+}
+
+.program-block.active {
+    transform: translateX(0); /* Возвращаем блок на место */
+    opacity: 1; /* Отображаем блок */
+}
+
+.program-block:hover {
+    background-color: #000000;
+    cursor: pointer;
+}
+
+.program-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.program-block.expand .program-content {
+    max-height: 3000px; /* Раскрытие контента */
+    overflow: visible;
+    padding-top: 10px;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+}
+
+/* Адаптив для мобильных устройств */
+@media (max-width: 768px) {
+    .program-block {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .program-block.left, .program-block.right {
+        align-self: center;
+        transform: translateX(0); /* Убираем смещение для мобильных устройств */
+        border-radius: 15px; /* Скругляем все углы для мобильных устройств */
+    }
+}
+
+/* Общий стиль для секции с белым фоном */
+#scholarship-section {
+    background-color: #f0f8f8;
+    padding: 20px;
+    text-align: center;
+}
+
+#scholarship-section h2 {
+    font-size: 40px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Скрываем элементы до появления */
+.scholarship-info p, .apply-now {
+    font-size: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Когда элементы видны */
+.scholarship-info.visible h2 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Для пунктов текста */
+.scholarship-info p.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Анимация появления с задержкой для каждого пункта */
+.scholarship-info p:nth-child(2) {
+    transition-delay: 0.2s;
+}
+.scholarship-info p:nth-child(3) {
+    transition-delay: 0.4s;
+}
+.scholarship-info p:nth-child(4) {
+    transition-delay: 0.6s;
+}
+.scholarship-info p:nth-child(5) {
+    transition-delay: 0.8s;
+}
+.scholarship-info p:nth-child(6) {
+    transition-delay: 1s;
+}
+.scholarship-info p:nth-child(7) {
+    transition-delay: 1.2s;
+}
+
+/* Кнопка */
+.apply-now p {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.apply-button {
+    background-color: #1E9CFF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Raleway", sans-serif;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.apply-button:hover {
+    background-color: #1678cc;
+}
+
+.apply-now.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+
+/* Анимация для текста */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    #scholarship-section {
+        padding: 30px 10px;
+    }
+
+    #scholarship-section h2 {
+        font-size: 28px;
+    }
+
+    .apply-now p {
+        font-size: 16px;
+    }
+
+    .apply-button {
+        font-size: 14px;
+    }
+}
+
+/*Контактная форма - текст переводить когда меняешь язык*/
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8f8;
+    width: 100%;
+    height: 100%;
+}
+
+/* Общие стили для заголовков */
+h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Основные стили для формы */
+.contact {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Allows the section to expand with content */
+    overflow: hidden;
+    padding-bottom: 50px; /* Adds padding to ensure form isn't too close to footer */
+}
+
+/* Adjustments for the contact form section */
+#contact-form-section {
+    background-color: #f0f8f8;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 40px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    padding-bottom: 40px; /* Padding at the bottom to avoid being too close to footer */
+}
+
+/* Стили для заголовка */
+.contact-title {
+    color: #000000;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+#contact-form-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Стили для формы */
+#contact-form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact-form-section label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#contact-form-section input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    background-color: #ffffff;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form-section button {
+    padding: 12px;
+    background-color: #1E9CFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form-section button:hover {
+    background-color: #1678cc;
+}
+
+/* Сообщение о результате отправки */
+#contact-form-section p#responseMessage {
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Адаптивность для ноутбуков */
+@media (max-width: 1200px) {
+    #contact-form-section {
+        max-width: 80%; /* Увеличиваем ширину для экранов с большей шириной */
+        padding: 30px;
+        height: 100vh;
+    }
+
+    #contact-form-section h2 {
+        font-size: 22px;
+    }
+
+    #contact-form-section input, #contact-form-section button {
+        font-size: 15px;
+    }
+}
+
+/* Адаптивность для планшетов */
+@media (max-width: 992px) {
+    #contact-form-section {
+        max-width: 90%;
+        padding: 25px;
+    }
+
+    #contact-form-section h2 {
+        font-size: 20px;
+    }
+
+    #contact-form-section input, #contact-form-section button {
+        font-size: 14px;
+    }
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    #contact-form-section {
+        max-width: 95%;
+        padding: 20px;
+    }
+
+    #contact-form-section h2 {
+        font-size: 18px;
+    }
+
+    #contact-form-section input, #contact-form-section button {
+        font-size: 14px;
+    }
+}
+
+/* Дополнительная адаптивность для очень маленьких экранов */
+@media (max-width: 480px) {
+    #contact-form-section {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    #contact-form-section h2 {
+        font-size: 16px;
+    }
+
+    #contact-form-section input, #contact-form-section button {
+        font-size: 12px;
+    }
+}
+
+
+.scroll-to-contact {
+    padding: 10px 20px;
+    background-color: #1E9CFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-to-contact:hover {
+    background-color: #1678cc;
+}
+
+/* Плавная прокрутка */
+html {
+    scroll-behavior: smooth;
+}
+
+#contact-form-section {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#contact-form-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Кнопка прокрутки наверх */
+.scroll-to-top-btn {
+    display: none; /* Кнопка будет скрыта по умолчанию */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #1E9CFF;
+    color: white;
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1000; /* Поверх всех элементов */
+    transition: background-color 0.3s ease;
+}
+
+.scroll-to-top-btn:hover {
+    background-color: #1678cc;
+}
+
+/* Анимация появления кнопки */
+.scroll-to-top-btn.show {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-to-top-btn.hide {
+    opacity: 0;
+}
+
+
+.program-block-advantage.active {
+    opacity: 1; /* Make sure it's visible */
+    transform: translateY(0); /* Animation on appearance */
+}
+
+.program-block-advantage {
+    opacity: 0; /* Hidden by default */
+    transform: translateY(50px); /* Start with a slight shift */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+}
+
+#advantages-section {
+    background-color: #DFCDB7;
+    padding: 40px 0;
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    align-items: start;
+    grid-gap: 10px;
+    height: 80%;
+
+}
+
+/* Program block styles */
+.program-block-advantage {
+    background-color: #B29376;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.8s ease, box-shadow 0.8s ease;
+    max-width: 800px;
+    box-sizing: border-box;
+}
+
+
+/* Заголовок секции */
+#advantages-section h2 {
+    font-size: 40px;
+    color: #000000;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    grid-column: 1 / -1; /* Заголовок на всю ширину секции */
+    justify-self: center; /* Центрирование заголовка */
+}
+
+.program-title-advantage {
+    font-size: 1.5rem; /* Увеличенный размер шрифта */
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff;
+    text-align: center; /* Центрирование заголовка внутри блока */
+}
+
+
+/* Hover эффект для блоков */
+.program-block-advantage:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Анимация раскрытия блоков */
+.program-block-advantage.expand .program-content-advantage {
+    max-height: 1500px; /* Максимальная высота при раскрытии */
+    overflow: visible;
+    transition: max-height 0.8s ease-in-out;
+}
+
+.program-content-advantage {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирование по горизонтали */
+    justify-content: space-between; /* Распределение по вертикали с промежутками */
+    height: 100%;
+}
+
+/* Адаптивный дизайн для мобильных устройств */
+@media (max-width: 768px) {
+    #advantages-section {
+        grid-template-columns: 1fr; /* Один блок на всю ширину экрана */
+        grid-gap: 20px;
+        padding: 20px;
+    }
+    .program-block-advantage {
+        width: 100%; /* Блок занимает всю ширину экрана */
+        max-width: 100%; /* Ограничиваем ширину */
+        margin: 0 auto; /* Центрируем блок */
+    }
+}
+
+/* Адаптив для планшетов от 481px до 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+    #advantages-section {
+        grid-template-columns: 1fr; /* Один блок на всю ширину экрана */
+        grid-gap: 20px;
+        padding: 20px;
+    }
+    .program-block-advantage {
+        max-width: 100%; /* Ограничиваем ширину */
+        margin: 0 auto; /* Центрируем блок */
+    }
+}
+
+
+/* Styles for screens wider than 1025px */
+@media (min-width: 1025px) {
+    #advantages-section {
+        grid-template-columns: repeat(3, 1fr); /* Display three blocks in a row */
+        grid-gap: 20px;
+        padding: 40px;
+    }
+    .program-block-advantage {
+        max-width: 400px; /* Limit block width */
+    }
+}
+/* Адаптив для больших экранов от 1025px */
+@media (min-width: 1025px) {
+    #advantages-section {
+        grid-template-columns: repeat(3, 1fr); /* Три блока в ряд */
+        grid-gap: 20px;
+        padding: 20px;
+    }
+
+    .program-block-advantage {
+        max-width: 500px; /* Ограничение ширины блока */
+    }
+}
+#advantages-section {
+    background-color: #DFCDB7;
+    padding: 40px 0;
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    align-items: start;
+    grid-gap: 10px;
+    height: 80%;
+
+}
+
+
+
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Расстояние между значками */
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #000; /* Цвет значков */
+    font-size: 24px; /* Размер значков */
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #1D58F2; /* Цвет при наведении */
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #f0f8f8; /* Цвет текста */
+    padding: 10px 20px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+footer p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Ensures the footer stays below the form */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #f0f8f8;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    margin-top: auto; /* Ensures the footer doesn't overlap with the content */
+    clear: both; /* Ensures no overlap with floating elements */
+}
+
+/* Optional: Add some space to ensure the form doesn't clash with the footer */
+@media (max-width: 1200px) {
+    #contact-form-section {
+        padding-bottom: 60px;
+    }
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: #f0f8f8; /* Цвет значков по умолчанию */
+    font-size: 30px; /* Размер значков */
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #1E9CFF; /* Цвет значков при наведении */
+}
+
+/* Адаптив для маленьких экранов */
+@media (max-width: 768px) {
+    .social-icons a {
+        font-size: 24px; /* Меньший размер значков на мобильных устройствах */
+    }
+}
