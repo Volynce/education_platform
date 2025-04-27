@@ -3,12 +3,12 @@ $(document).ready(function() {
         en: {
             successMessage: "Your message has been sent successfully.",
             errorMessage: "There was an error. Please try again.",
-            emailError: "Error sending email to go_study_in_china@mail.ru"
+            emailError: "Error sending email to example@mail.ru"
         },
         ru: {
             successMessage: "Ваше сообщение успешно отправлено.",
             errorMessage: "Произошла ошибка. Пожалуйста, попробуйте снова.",
-            emailError: "Ошибка при отправке письма на go_study_in_chина@mail.ru"
+            emailError: "Ошибка при отправке письма на example@mail.ru"
         }
     };
 
