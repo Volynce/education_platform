@@ -28,13 +28,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'kaihuitongda@gmail.com';  // Ваш Gmail-логин
+        $mail->Username = 'example@gmail.com';  // Ваш Gmail-логин
         $mail->Password = 'vsyl zwes uyzz oryz';  // Пароль приложения
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
 
-        $mail->setFrom('kaihuitongda@gmail.com', 'GoStudyInChina');
-        $mail->addAddress('kaihuitongda@gmail.com');  // Получатель
+        $mail->setFrom('example@gmail.com', 'GoStudyInChina');
+        $mail->addAddress('example@gmail.com');  // Получатель
 
         $mail->Subject = 'noReply: from GoStudyInChina.org';
         $message = "Имя: $name\n";
